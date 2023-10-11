@@ -1,19 +1,48 @@
-const students = [
-    {firstName: 'Jason', lastName: 'He', favoriteGame: 'ClashOfClans', student: true, graduated: false, favoriteNumbers: [1,3,4,5,6,1234]}, 
-    {firstName: 'Evan', lastName: 'Cow', favoriteGame: 'n/a', student: true, graduated: false, favoriteNumbers: [2,4,6,8,10]}, 
-    {firstName: 'Evan', lastName: 'Cow', favoriteGame: 'n/a', student: true, graduated: false, favoriteNumbers: [2,4,6,8,10]}, 
-    {firstName: 'Evan', lastName: 'Cow', favoriteGame: 'n/a', student: true, graduated: false, favoriteNumbers: [2,4,6,8,10]}, 
+const people = [
+  {
+    firstName: "Jason",
+    lastName: "He",
+    favoriteColor: "green",
+    student: true,
+    graduated: true,
+    favoriteNumbers: [1, 3, 4, 7, 10],
+  },
+  {
+    firstName: "Evan",
+    lastName: "Cow",
+    favoriteColor: "yellow",
+    student: true,
+    graduated: true,
+    favoriteNumbers: [2, 4, 6, 8, 10],
+  },
+  {
+    firstName: "Evan",
+    lastName: "How",
+    favoriteColor: "blue",
+    student: false,
+    graduated: false,
+    favoriteNumbers: [11, 12, 123, 432],
+  },
+  {
+    firstName: "Evan",
+    lastName: "Wow",
+    favoriteColor: "black",
+    student: true,
+    graduated: false,
+    favoriteNumbers: [10, 20, 30, 40, 50],
+  },
 ];
 
-students.forEach((student) => console.log(student.firstName + student.lastName));
+people.forEach((person) =>
+  console.log(person.firstName + " " + person.lastName)
+);
 
-students.forEach((student) => console.log(favoriteNumbers)
+people.forEach((person) => 
+    // loop array    
+    console.log(person.favoriteNumbers)
+);
 
-// change content inside arrays
+const students = people.filter((person) => person.student === true);
 
-// write functions to accomplish the following.
-// -Using forEach, print all of the objects names in the console
-// -Using forEach, print all the object’s arrays’ elements in the console one
-// line at a time
-// -Using filter, return a new array by filtering the array based on one of the
-// properties
+console.log(students);
+//filter array based on people that are students but just names of students
