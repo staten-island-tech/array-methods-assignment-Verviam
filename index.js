@@ -33,16 +33,16 @@ const people = [
   },
 ];
 
-people.forEach((person) =>
+people.forEach((person) => 
   console.log(person.firstName + " " + person.lastName)
 );
 
-people.forEach((person) => 
-    // loop array    
-    console.log(person.favoriteNumbers)
-);
+people.forEach((person) => { 
+  person.favoriteNumbers.forEach((number) => 
+  console.log(number))
+}); // if nested forEach, use {}
 
 const students = people.filter((person) => person.student === true);
-
-console.log(students);
-//filter array based on people that are students but just names of students
+students.forEach((student) => 
+  console.log('Students: ' + student.firstName + ' ' + student.lastName)
+  );
