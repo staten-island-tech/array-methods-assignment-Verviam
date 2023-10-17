@@ -44,5 +44,5 @@ people.forEach((person) => {
 
 const students = people.filter((person) => person.student === true);
 students.forEach((student) => 
-  console.log('Students: ' + student.firstName + ' ' + student.lastName)
+  console.log(`Students: ${student.firstName} ${student.lastName}`) // template literals
   );
